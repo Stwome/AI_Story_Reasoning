@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Story Duel</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Two-Character Roleplay Engine</p>
+        <h1>Story Duel</h1>
+        <p class="hero-copy">
+          Drop two characters into one scene, give them clashing motives, and watch the scene unfold
+          with visible inner thoughts and story beats.
+        </p>
+      </div>
+      <div class="hero-actions">
+        <button id="exampleButton" class="secondary-button" type="button">Load Example</button>
+        <button id="resetButton" class="secondary-button" type="button">Reset</button>
+      </div>
+    </header>
+
+    <main class="app-grid">
+      <section class="panel input-panel">
+        <div class="section-heading">
+          <h2>Scene Setup</h2>
+          <p>These fields become the public interface sent to the Worker relay.</p>
+        </div>
+
+        <form id="storyForm" class="story-form">
+          <label>
+            <span>Character A</span>
+            <textarea id="characterA" name="characterA" rows="5" placeholder="Name, personality, strengths, flaws, habits, improvisation style."></textarea>
+          </label>
+
+          <label>
+            <span>Character B</span>
+            <textarea id="characterB" name="characterB" rows="5" placeholder="Name, personality, strengths, flaws, habits, improvisation style."></textarea>
+          </label>
+
+          <label>
+            <span>Scene</span>
+            <textarea id="scene" name="scene" rows="4" placeholder="Place, time, atmosphere, constraints, and relevant details."></textarea>
+          </label>
+
+          <label>
+            <span>Immediate Shared Situation</span>
+            <textarea id="situation" name="situation" rows="3" placeholder="What has already happened and what pressure exists right now?"></textarea>
+          </label>
+
+          <label>
+            <span>What Each Character Wants</span>
+            <textarea id="goals" name="goals" rows="4" placeholder="Describe the conflict, stakes, and what happens if either character fails."></textarea>
+          </label>
+
+          <label>
+            <span>Tone / Genre</span>
+            <textarea id="tone" name="tone" rows="2" placeholder="Tense comic thriller, noir, tragicomic, screwball, etc."></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button id="startButton" class="primary-button" type="submit">Start Scene</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel transcript-panel">
+        <div class="section-heading">
+          <h2>Transcript</h2>
+          <p>Thoughts render in blue. Actions and dialogue render in black.</p>
+        </div>
+
+        <div id="statusBanner" class="status-banner hidden" role="status" aria-live="polite"></div>
+        <div id="transcript" class="transcript" aria-live="polite">
+          <div class="empty-state">
+            <h3>No scene yet</h3>
+            <p>Fill the setup fields, then start the scene. Continue it turn by turn below.</p>
+          </div>
+        </div>
+
+        <form id="turnForm" class="turn-form">
+          <label>
+            <span>Next Turn</span>
+            <textarea id="userTurn" name="userTurn" rows="3" placeholder="Push the scene forward, introduce a complication, or let the characters react."></textarea>
+          </label>
+
+          <div class="turn-actions">
+            <button id="sendButton" class="primary-button" type="submit">Send Turn</button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
