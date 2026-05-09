@@ -1,3 +1,8 @@
+/*  
+    File: project2.html
+    Author: Steven Medinets
+    This file controls the colors, layout, and visual design of the Story Duel webpage. 
+*/
 :root {
   color-scheme: light;
   --bg: #f3eee4;
