@@ -1,3 +1,8 @@
+/* 
+    File: project2.html
+    Author: Steven Medinets
+    Purpose: This file handles user input, sends requests to the Worker, and displays the story output.
+*/
 (function () {
   const config = window.STORY_DUEL_CONFIG || {};
   const defaultState = {
