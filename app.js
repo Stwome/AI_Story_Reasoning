@@ -1,5 +1,5 @@
 /* 
-    File: project2.html
+    File: app.js
     Author: Steven Medinets
     Purpose: This file handles user input, sends requests to the Worker, and displays the story output.
 */
