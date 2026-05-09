@@ -1,5 +1,5 @@
 /* 
-    File: project2.html
+    File: config.js
     Author: Steven Medinets
     Purpose: This file stores the web address used to connect the webpage to the Cloudflare Worker. 
 */
